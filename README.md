@@ -2,6 +2,8 @@
 
 TypeScript SDK for [TxLINE](https://txline-docs.txodds.com/) — TxODDS's verified sports-data oracle on Solana. It gives you **modern `@solana/kit` tooling** for the on-chain program, **typed REST/SSE API shapes**, and **runnable examples** for the full integration path.
 
+This is generally vibecoded, mainly tidying up code I had written to test and explore the API and program myself. Feel free to fix any problems you find or add anything and I will probably just merge it without looking too closely. I only built this so I can use it, and maybe it will help people use TxLine with a more modern SDK than their docs suggest. 
+
 ## What you get
 
 | Layer | Location | Purpose |
