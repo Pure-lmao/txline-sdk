@@ -1,0 +1,15 @@
+[
+  {
+    "Ts": 1782118800000,
+    "StartTime": 1782439200000,
+    "Competition": "World Cup",
+    "CompetitionId": 72,
+    "FixtureGroupId": 10115674,
+    "Participant1Id": 2740,
+    "Participant1": "Paraguay",
+    "Participant2Id": 1519,
+    "Participant2": "Australia",
+    "FixtureId": 17588229,
+    "Participant1IsHome": true
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "FixtureId": 17588229,
+    "MessageId": "1834620756:00003:000015-10021-stab",
+    "Ts": 1782135273543,
+    "Bookmaker": "TXLineStablePriceDemargined",
+    "BookmakerId": 10021,
+    "SuperOddsType": "1X2_PARTICIPANT_RESULT",
+    "GameState": null,
+    "InRunning": false,
+    "MarketParameters": null,
+    "MarketPeriod": null,
+    "PriceNames": [
+      "part1",
+      "draw",
+      "part2"
+    ],
+    "Prices": [
+      3085,
+      2322,
+      4078
+    ],
+    "Pct": [
+      "32.415",
+      "43.066",
+      "24.522"
+    ]
+  }
+]

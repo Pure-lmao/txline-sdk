@@ -1,0 +1,28 @@
+{
+  "name": "txline-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the TxLINE Solana program and REST/SSE API (@solana/kit)",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "example:signup": "bun run examples/01-signup.ts",
+    "example:purchase": "bun run examples/02-purchase.ts",
+    "example:fixtures": "bun run examples/03-fixtures.ts",
+    "example:odds": "bun run examples/04-odds.ts",
+    "example:scores": "bun run examples/05-scores.ts",
+    "example:streaming": "bun run examples/06-streaming.ts",
+    "example:validation": "bun run examples/07-onchain-validation.ts",
+    "example:prove-stat": "bun run examples/08-prove-stat.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@solana-program/compute-budget": "^0.16.0",
+    "@solana/kit": "^6.10.0"
+  }
+}
