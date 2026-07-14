@@ -43,7 +43,7 @@ export function isHeartbeatFrame(frame: SseFrame): boolean {
    return frame.event === 'heartbeat' || isHeartbeatPayload(frame.data);
 }
 
-function parseSseDataPayload(event: string, payload: string): unknown {
+function parseSseDataPayload(payload: string): unknown {
    const trimmed = payload.trim();
    if (!trimmed) {
       return null;
@@ -51,13 +51,6 @@ function parseSseDataPayload(event: string, payload: string): unknown {
    try {
       return JSON.parse(trimmed) as unknown;
    } catch {
-      if (event === 'heartbeat' && !trimmed.endsWith('}')) {
-         try {
-            return JSON.parse(`${trimmed}}`) as unknown;
-         } catch {
-            /* fall through */
-         }
-      }
       return trimmed;
    }
 }
@@ -91,7 +84,7 @@ export function parseSseBlock(block: string): SseFrame | null {
    }
 
    const payload = dataLines.join('\n');
-   const data = parseSseDataPayload(event, payload);
+   const data = parseSseDataPayload(payload);
    const resolvedEvent = event || (isHeartbeatPayload(data) ? 'heartbeat' : '');
    return id !== undefined ? { id, event: resolvedEvent, data } : { event: resolvedEvent, data };
 }

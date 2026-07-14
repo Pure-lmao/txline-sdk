@@ -163,7 +163,7 @@ Copy `.env.sample` → `.env` before running examples. Recorded API responses la
 
 - **Browser vs Node:** `loadKeypairSignerFromJsonFile` in `solana.ts` uses `node:fs`. Use wallet adapters in the browser; import program/API modules directly.
 - **Bun + API compression:** The client sets `Accept-Encoding: gzip, deflate, br` automatically — Bun cannot decode zstd responses.
-- **SSE wire format:** Live streams use `data:` + `id:` lines; heartbeats use `event: heartbeat`. The parser in `examples/_shared.ts` accepts current and documented formats.
+- **SSE wire format:** Live streams use `data:` + `id:` lines; heartbeats use `event: heartbeat`. The parser in `api/sse.ts` accepts current and documented formats (`examples/_shared.ts` re-exports it for the runnable examples).
 - **Scores:** All score REST/SSE endpoints return PascalCase (`ApiScoreEvent`). Narrow on `Type` — `Soccer` is association football, `UsFootball` is NFL. Soccer SSE misnames some fields `StatusUsFootballId` / `DataUsFootball` (see `ApiSoccerScoreEventFields`).
 - **Merkle hashes:** Validation endpoints return 32-byte JSON number arrays (`ApiMerkleHash`); use `hash32FromBytes` / `proofNodeFromApi` before on-chain codecs. `GET /api/odds/validation` returns the odds row under **`odds`** (maps to on-chain `oddsSnapshot`).
 
